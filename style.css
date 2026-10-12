@@ -112,3 +112,12 @@ li {
     background: #d97706;
 }
 
+.delete-btn {
+    background: #dc2626;
+    white-space: nowrap;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+

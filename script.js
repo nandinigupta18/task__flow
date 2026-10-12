@@ -28,7 +28,8 @@ function addTask() {
     toggleBtn.textContent = "Complete";
 
     toggleBtn.addEventListener("click", function () {
-        const isCompleted = taskText.classList.toggle("completed");
+        const isCompleted =
+            taskText.classList.toggle("completed");
 
         if (isCompleted) {
             status.textContent = "Completed";
@@ -45,12 +46,23 @@ function addTask() {
         }
     });
 
+    // Delete button
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.className = "delete-btn";
+
+    deleteBtn.addEventListener("click", function () {
+        li.remove();
+    });
+
     li.appendChild(taskText);
     li.appendChild(status);
     li.appendChild(toggleBtn);
+    li.appendChild(deleteBtn);
 
     taskList.appendChild(li);
 
     taskInput.value = "";
 }
+
 
